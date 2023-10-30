@@ -1,0 +1,137 @@
+import datetime
+import random
+import re
+from datetime import datetime, date
+#Part 1
+names = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace", "Hannah", "Isaac", "Jane", "Kevin", "Lily"]
+print(names.tuple())
+print(names.list())
+numbers = [7, 12, 15, 9, 20, 18, 6, 23, 10, 14, 19, 8]
+people = dict(zip(names, numbers))
+print(people)
+
+for i in range(10):
+    print(i)
+
+nums = [1, 2, 5, 3, 7, 8, 4, 9, 0]
+print(nums.min())
+print(nums.max())
+print(nums.sum())
+print(nums.sorted())
+
+var = input("Please enter a value")
+print(type(var))
+
+name = input("Please enter a name: ")
+print("Sarah called out " + str.upper(name) + " in hopes of some response")
+print("Quietly, Sarach whispered " + str.lower(name) + " frightened for " + name)
+
+sentence = "Natural language processing is an interesting field of study."
+tokens = sentence.split()
+for token in tokens:
+    print(token)
+
+plz = str.lower(input("Please enter the fucntion you need help with: "))
+print(help(plz))
+
+# Part 2
+date1 = date(year = 2005, month = 5, day = 10)
+date2 = datetime.date.now()
+date3 = date1 - date2
+print("It is currently " + str(datetime.datetime.now())) # Displays the year, month, day, hour, minute, second, and microsecond
+print("It is a lovely "+ datetime.date.today() + " to be a programmer") # Shows today's date
+print(str(datetime.time.now()) + " is no time to be sleeping in!") # Shows the current time
+print("It has been " + str(date3) + " since you were born") # Shows the difference between two dates
+
+seq = ["Bob", "Stacey", "Xavier", "Seb", "Armstrong", "Ventura", "Ace"] # establishes a sequence
+print(random.randint(1, 100) + " times I have tried calling you") # Chooses a random number between 1 and 100 inclusive
+print(random.choice(seq)) # chooses a random element from the list defined earlier
+
+txt = "The rain in Spain"
+x = re.search("^The.*Spain$", txt)
+text = "This is a sample text containing some numbers like 12345 and 67890."
+pattern = r'\d+'
+match = re.search(pattern, text)
+if match:
+    print("Match found:", match.group())
+else:
+    print("No match found.")
+
+pattern = r'\d+'
+matches = re.findall(pattern, text)
+if matches:
+    print("Matches found:", matches)
+else:
+    print("No matches found.")
+
+regex = re.compile(pattern)
+matches = regex.findall(text)
+if matches:
+    print("Matches found:", matches)
+else:
+    print("No matches found.")
+
+match = re.match(pattern, text)
+if match:
+    print("Match found at the beginning:", match.group())
+else:
+    print("No match found at the beginning.")
+
+#Part 3
+"""
+a. enumerate(tuple)
+b. for loop with a nested if statement
+c. map(list)
+d. datetime.datetime.now()
+e. random.choice(seq)
+"""
+
+#Part 4
+def C_to_F():
+    c = float(input("Please enter the degrees in Centigrade\n"))
+    f = round((c * (9/5)) + 32, 2)
+    print(str(c) + ' degrees Centigrade converts to ' + str(f) + ' degrees Farenheit')
+    return
+
+def F_to_C():
+    f = float(input("Please enter the degrees Farenheit\n"))
+    c = round((f - 32) * (5/9), 2)
+    print(str(f) + " degrees Farenheit converts to " + str(c) + ' degrees Centigrade')
+    return
+
+def Ml_to_lOz(vol):
+    loz = round(vol / 29.574, 2)
+    print(str(vol) + " milliliters in fluid ounces is approximately " + str(loz))
+    return
+
+def lOz_to_Ml(loz):
+    vol = round(loz * 29.574, 2)
+    print(str(loz) + " fluid ounces in milliliters is approximately " + str(vol))
+    return
+
+def Gr_to_Oz(gram):
+    ounce = round(gram / 28.35, 2)
+    print(str(gram) + " grams in ounces is approximately " + str(ounce))
+    return
+
+def Oz_to_Gr(ounce):
+    gram = round(ounce * 28.35, 2)
+    print(str(ounce) + ' ounces in grams is approximately ' + str(gram))
+    return
+    
+#Part 5
+repeat = True
+while repeat:
+    choice = str.lower(input("Please type 'f' if you would like to convert from Fareheit to Centigrade and type 'c' if you would like to convert from Centigrade to Farenheit\n"))
+    if choice == 'c':
+        C_to_F()
+    elif choice == 'f':
+        F_to_C()
+    else:
+        option = str.lower(input("Are you done? (y/n)"))
+        if option ==' y ':
+            repeat = False
+        else:
+            print("Then please enter either f or c")
+
+num = float(input("\n\n\nPlease enter a valid number\n"))

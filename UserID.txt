@@ -1,0 +1,22 @@
+import random
+
+special = ["!", ",", "/", "?", ".", "#", "$", "^", "&", "*", "(", ")", "{", "}", "|", ":", ";", "'", '"', "<", ">", " "]
+UserID_list = []
+
+fname = str.strip(input("Please enter your first name: "))
+lname = str.strip(input("Please enter your last name: "))
+sp = random.choice(special)
+
+while True:
+    sp_ = random.choice(special)
+    if sp_ != sp:
+        break
+
+num = int(random.randint(1000, 10000))
+ln = len(lname)
+UserID = ""
+while UserID not in UserID_list:
+    UserID = sp_ + fname[0] + fname[2] + str(num % 10) + lname[ln - 1] + lname[ln - 2] + str(num) + sp
+    if UserID not in UserID_list:
+        UserID_list.append(UserID)
+print(UserID)

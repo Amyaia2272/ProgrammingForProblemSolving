@@ -1,0 +1,58 @@
+Part 1 notes
+- All functions, whether data type conversions or otherwise, must include a set of 
+  parenthesis at the end
+    - str(var)
+    - int(var)
+    - float(var) 
+    - input(var)
+    - str.upper(var)
+    - str.lower(var)
+    - etc.
+- Rounding numbers works off of a numberline system
+  - Using the location of the decmial point as the 0, postive numbers will work towards
+    the tenths place, while negative numbers will work towards the ones place onwards
+    - round(57.67, 2) -> 57.7
+    - round(57.67, -2) -> 60.0
+
+
+Part 2 notes
+- string fucntions are always denoted as str.fucntion(vairable)
+- use https://www.w3schools.com/python/python_strings_methods.asp for a list of 
+  usable string functions and examples
+
+Part 3 notes
+- You can either use the str.title() function in the same line as the input, or after
+   - name = str.title(input())
+   - or
+   - name = input()
+     name = str.title(name) 
+- Any input you don't want to be a string should always be defined as such at the 
+  input feild
+    - integer = int(input())
+    - decimal = float(input())
+- any non-strings must be converted to a string when prineted alongside string 
+  data types
+    - for this example, num has a int value attached, val has a string, and x has a 
+    float value
+      - print("Hello " + val + " you input the integer " + str(int) + " and the float
+      value " + str(x))
+
+Part 4 notes
+- The python operator for multiplication is the asterisck (*)
+- You are able to output the math for this inside the print fucntion like so
+  - str(var1 * var2)
+
+* while easier to write and understand from an outside perpsective, it becomes harder
+to work with if you later wish to pull this value for later manipulation
+
+Part 5 notes
+- You can write out fractions in python by writing it out inside its own parenthesis
+  - The equation 5 times 5 16ths plus 4 can be written as
+  - 5 * (5/16) + 5
+     - Python understands PEMDAS so you don't have to worry about the order in which 
+     the equation resloves
+
+Part 6
+- Its easiest to handle the precentage in terms of a decimal (0 to 1)
+- meal tip is calculated based on price before tax
+- use the escape character "\t" to easily create a tab within the program without maunally entering the spaces

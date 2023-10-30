@@ -1,0 +1,27 @@
+import random as r
+filler = r.randint(10000000, 100000000)
+name = str.title(input("Please enter your name (first, last, or both): "))
+site = str.upper(input("Please enter the name of the site you are using this password for: "))
+characters = int(input("How many digits are you allowed (max): "))
+
+digits = [int(digit) for digit in range(0, 9)]
+
+split_nums = [digits[0:2], digits[3:5], digits[6:]]
+split_name = name.encode()
+site_manip =  site.encode()
+
+password = ""
+x = 0
+while len(password) < 18:
+    password += split_name[x]
+    password += split_nums[x, x + 1]
+    password += site_manip[x, x + 1]
+    x ++ 1
+
+x = 0
+fitted_pas = ""
+while x < characters:
+    fitted_pas += password[x]
+    x += 1
+
+print(f"Your new password is {fitted_pas}")

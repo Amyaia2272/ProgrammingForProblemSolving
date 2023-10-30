@@ -1,0 +1,50 @@
+UserID generator Documentation
+
+Target Audience: Administrators and General Users
+Scope: User ID generation
+Series: IS documentation
+
+Scope: 
+User IDS are generated randomly using the user's first and last name, taking their first initial, the second 
+letter of thier name, the last two letters of their last name, a randomly generated 4 digit number, and two randomly chosen special 
+characters
+
+Using the pre-existing python module, random, two special characters are chosen from a list containing commonly
+used special characters, which are capped onto each end of the User ID. The same module is used to choose a 4 
+digit number from which different values are extracted from mathematically
+
+A check for Duplicate IDs is included in order to prevent two people from having conflicting login information
+which can lead to system conflicts, errors, and breaches
+
+User ID Format:
+[sp1][fin1][fin2][num1][lin1][lin2][num2][sp2]
+
+Details of User ID format:
+sp1/2 -> A special character (ie ", #, ?, !)
+fin1/2 -> The first initial and the second letter of the user's first name
+lin1/2 -> The last and second to last character of the user's last name
+num1 -> The tens place of the randomly generated number
+num2 - > The whole randomly generated 4 digit number
+
+Case - Sensitivity:
+User ID is not Case sensitive due to conversions that take place within the code
+Although it can be proven useful in the event that your information is leaked by increasing the number of 
+possible case possiblities when trying to brute force a password
+
+Error Handling:
+.strip is used for any unexpected whitespaces that may appear within the user's responses
+A check for Duplicate IDs is included in order to prevent two people from having conflicting login information
+
+Conclusion:
+A simple UserID generator such as the one provided can help mitigate the possiblity of system breaches and helps
+users with practicing safe internet usage, while giving an example of a secure userID and/or password, in the
+event that the generator is used for a passowrd generator, use a different ID from the one created for the 
+UserID
+
+Contact information:
+Sebastian Brand
+Email: sbrand@albany.edu
+Phone: 845-544-8664
+
+Version History:
+10/30/2023: v1.0 -  Initial File creation

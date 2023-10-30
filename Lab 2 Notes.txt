@@ -1,0 +1,55 @@
+Part 1 Notes
+ - You can use the function "in range(x, y)" to represent "num >= x and num <= y"
+ - elif should be used to create a sequential conditional chain
+ 
+Part 2 Notes
+ - Use the % symbol to represent modular division in python
+   - 5 % 2 = 1
+   - 50000004 % 2 = 0
+ - Elif is not needed for this as the program only has 2 possible outcomes
+
+Part 3 Notes
+ - A really simple method to this is "nesting" an if statemnet into the loop
+    - nesting means to have another conditional and/or loop inside of a loop and/or conditional statemnet
+
+Part 4 Notes
+ - Remember the boolean matrix
+ 
+A      B      and     or  
+True   True   True    True
+False  True   False   True
+True   False  False   True
+False  False  False   False
+
+ - Conditions can be layered on top of each other
+   - (A >= B and B >= C) or (A == B and A != C)
+   - While all statements inside of each of the two parenthesis need to be True
+   - Only one of the two parenthesis need to have a final evauluation of true in order for the if statement to 
+   become true
+
+   - A = 5, B = 5, C = 6
+   - (A >= B and B >= C) or (A == B and A != C)
+   - Lets evaulate this 
+   - (A >= B and B >= C) -> (5 >= 5 and 5 >= 6)
+   - While A and B are the same value, 6 is grater than 5, making this first set of parenthesis False
+   - (A == B and A != C) -> (5 == 5 and 5 != 6)
+   - Since A and B are the same value, and A and C are not the same value, this second set of parenthesis 
+   becomes True
+   - (A >= B and B >= C) or (A == B and A != C) -> (5 >= 5 and 5 >= 6) or (5 == 5 and 5 != 6) ->
+     (True and False) or (True and True) -> False or True -> True
+   
+Part 5
+ - You can use either a for loop or a while loop for this section
+   - A while loop combines a conditional if statement with a for loop
+   - While loops will start once a condition becomes true and will continously run until the statement becomes 
+     false
+   - Syntax is "while(statement):"
+   - All conditional rules for if statements apply for while loops
+ - The statement x = x + 1 can be represented as x += 1
+   - Same goes for all other operations
+   - x = x / 1 -> x /= 1
+   - x = x * 1 -> x *= 1
+   - x = x - 1 -> x -= 1
+ - If you do not want to individually type out each and every capital and each and every state, copy whats underneath
+ states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Deleware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illnois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Lousisana', 'Maine', 'Maryland', 'Massachusettes', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Wisconsin', 'Wyoming']
+capitals = ['Montgomery', 'Juneau', 'Phoenix', 'Little Rock', 'Sacramento', 'Denver', 'Hartford', 'Dover', 'Tallahassee', 'Atlanta', 'Honolulu', 'Boise', 'Springfield', 'Indianapolis', 'Des Moines', 'Topeka', 'Frankfort', 'Baton Rouge', 'Agusta', 'Annapolis', 'Boston', 'Lansing', 'Saint Paul', 'Jakson', 'Jefferson', 'Helena', 'Lincoln', 'Carson', 'Concord', 'Trenton', 'Santa Fe', 'Albany', 'Raleigh', 'Bismarck', 'Columbus', 'Oklahoma', 'Salem', 'Harrisburg', 'Providence', 'Columbia', 'Pierre', 'Nashville', 'Austin', 'Salt Lake', 'Montpelier', 'Richmond', 'Olympia', 'Charleston', 'Madison', 'Cheyenne']
