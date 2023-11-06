@@ -42,9 +42,9 @@ event that the generator is used for a passowrd generator, use a different ID fr
 UserID
 
 Contact information:
-Sebastian Brand
-Email: sbrand@albany.edu
-Phone: 845-544-8664
+Name: [Redacted]
+Email: [Redacted
+Phone: [Redacted]
 
 Version History:
 10/30/2023: v1.0 -  Initial File creation
